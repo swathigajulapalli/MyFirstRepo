@@ -25,7 +25,7 @@ person = {
 console.log(person)
 console.log(person.fname)
 console.log(person[age])
-
+//Set the colors
 let colors = ['red','yellow','green',2,false]
 colors[5] = 'orange'
 console.log(colors)
