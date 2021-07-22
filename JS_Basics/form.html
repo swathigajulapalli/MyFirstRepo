@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <script>
+            function buttonclick(){
+                
+            // alert("Welcome Swathi");
+var value = document.getElementById("id1").value;
+// console.log("Helloo") 
+document.getElementById("h21").innerHTML = "Welcome " + value;        
+   }
+
+   function mouseover(){
+document.getElementById("img1").src = "key-sight.png";
+   }
+
+   function mouseout(){
+    document.getElementById("img1").src = "Tata-Motors-Logo.png";
+    }
+
+    function clicksubmit(){
+        var name = document.getElementById("id1").value;
+        var pwd = document.getElementById("id2").value;
+
+        if(name==""){
+            document.getElementById("id1").style.border = "solid 2px red";
+            alert("Enter user name..."+name);
+            return false;
+        }
+        else if(pwd.trim=="" || pwd.trim.length < 8){
+            document.getElementById("id2").style.border = "solid 2px red";
+            alert("Incorrect Pwd:"+pwd.length);
+            return false;
+        }
+        else{
+            return true;
+        }
+    }
+        </script>
+    </head>
+    <body>
+        <input id="id11" placeholder="username">sidd</input>
+        <h2 id="h21     ">Random Text</h2> 
+        <button  onclick="buttonclick()"> ClickMe </button>
+        <img src="Tata-Motors-Logo.png" height="50" onmouseover="mouseover()" 
+        onmouseout="mouseout()" id="img1"></img>
+
+<form onsubmit="return clicksubmit()">
+<input placeholder="Enter UserName" id="id1"/>
+<br><br>
+<input placeholder="Enter Password" type="password" id="id2"/>
+<br><br>
+<button type="submit">Submit</button>
+
+
+
+</form>
+
+
+    </body>
+</html>
